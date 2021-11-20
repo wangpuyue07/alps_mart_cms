@@ -1,0 +1,30 @@
+{
+  "kind": "collectionType",
+  "collectionName": "cart_items",
+  "info": {
+    "name": "cartItem",
+    "description": ""
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "priceId": {
+      "type": "string"
+    },
+    "user": {
+      "via": "cartItems",
+      "plugin": "users-permissions",
+      "model": "user"
+    },
+    "quantity": {
+      "type": "integer"
+    },
+    "productId": {
+      "type": "string"
+    }
+  }
+}

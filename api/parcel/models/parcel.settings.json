@@ -1,0 +1,26 @@
+{
+  "kind": "collectionType",
+  "collectionName": "parcels",
+  "info": {
+    "name": "Parcel",
+    "description": ""
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "postId": {
+      "type": "string"
+    },
+    "barcode": {
+      "type": "string"
+    },
+    "order": {
+      "via": "parcels",
+      "model": "order"
+    }
+  }
+}
